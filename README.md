@@ -194,9 +194,34 @@ Syntax:
 ```c
 return (expression);
 ```
+## Nested Control Structure
+---------------------------
+A nested control statement is a control statement that is contained within another control statement. You can do this to many levels, building up elaborate composites of various control statements. The compiler interprets these hierarchically, treating a composite control statement as a single statement for the purpose of determining what is affected by the next higher level of control.
 
+For eg: ``Nested for loop``
 
-
+Syntax:
+```c
+for(Initialization Expression;Condition;Inc/Dec) 
+{
+    for(Initialization Expression;Condition;Inc/Dec) 
+    {
+        Statement(s);
+    }
+    Statement(s);
+}
+```
+Example:
+```c
+for(i=0;i<4;i++) 
+{
+    for(j=0;j<4;j++) 
+    {
+        printf("%d\n",j);
+    }
+     printf("%d\n",i);
+}
+```
 
 
 
